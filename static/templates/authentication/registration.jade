@@ -1,0 +1,18 @@
+.row
+  .col-md-4.col-md-offset-4
+    h1 Zarejestruj się
+
+    .well
+      form(role="form", ng-submit="vm.register()")
+        .form-group
+          label(for="register__email") Email
+          input.form-control#register__email(type="email", ng-model="vm.email", placeholder="np. janek@poczta.pl")
+        .form-group
+          label(for="register__username") Nazwa użytkownika
+          input.form-control#register__username(type="text", ng-model="vm.username", placeholder="np. Janek")
+        .form-group
+          label(for="register__password") Hasło
+          input.form-control#register__password(type="password", ng-model="vm.password", placeholder="np. SkomplikowaneHasło")
+
+        .form-group
+          button.btn.btn-primary(type="submit") Prześlij

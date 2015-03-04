@@ -4,7 +4,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 
 
 class IndexView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'index.jade'
 
     @method_decorator(ensure_csrf_cookie)
     def dispatch(self, *args, **kwargs):

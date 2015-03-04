@@ -13,9 +13,10 @@ router.register(r'accounts', auth_views.UserViewSet)
 urlpatterns = patterns(
     '',
 
+    url(r'^admin/', include(admin.site.urls)),
+
     url(r'^api/v1/', include(router.urls)),
 
     url('^.*$', IndexView.as_view(), name='Index'),
 
-    url(r'^admin/', include(admin.site.urls)),
 )

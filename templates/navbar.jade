@@ -1,11 +1,30 @@
-nav.navbar.navbar-default(role="navigation" ng-controller="NavbarController as vm")
+//nav.navbar.navbar-material-green(role='navigation' ng-controller='NavbarController as vm')
+nav.navbar.navbar-material-green(role='navigation')
   .container-fluid
     .navbar-header
-      .button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#mums-invoices-nav")
+      .button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#mums-nav')
         span.sr-only Zwiń Menu
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href="/") Faktury Mamy
+      a.navbar-brand(ui-sref='#') Faktury Mamy
 
-    .collapse.navbar-collapse#mums-invoices-nav
+    .collapse.navbar-collapse#mums-nav
+      ul.nav.navbar-nav.pull-right
+        if user.is_authenticated
+          li
+            a(href='/{{ user.username }}') {{ user.username }}
+          li
+            a(href='/{{ user.username }}/settings') Ustawienia
+          li
+            //a(href='javascript:void(0)' ng-click='vm.logout') Wyloguj się
+            a(href='javascript:void(0)') Wyloguj się
+        else
+          li
+            a(href='/login') Zaloguj się
+          li
+            a(href='/registration') Zarejestruj się
+
+
+
+

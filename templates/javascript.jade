@@ -1,6 +1,8 @@
 | {% load compress %}
 | {% load staticfiles %}
+
 | {% compress js %}
+
 
 script(type="text/javascript", src="{% static 'bower_components/jquery/dist/jquery.js' %}")
 
@@ -9,5 +11,20 @@ script(type="text/javascript", src="{% static 'bower_components/bootstrap-materi
 script(type="text/javascript", src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}")
 
 script(type="text/javascript", src="{% static 'bower_components/angular/angular.js' %}")
+script(type="text/javascript", src="{% static 'bower_components/angular-ui-router/release/angular-ui-router.js' %}")
+script(type="text/javascript", src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}")
+
+script(type="text/javascript", src="{% static 'js/mum.js' %}")
+script(type="text/javascript", src="{% static 'js/mum.config.js' %}")
+script(type="text/javascript", src="{% static 'js/mum.router.js' %}")
+
+script(type="text/javascript", src="{% static 'js/authentication/authentication.module.js' %}")
+script(type="text/javascript", src="{% static 'js/authentication/services/authentication.service.js' %}")
+script(type="text/javascript", src="{% static 'js/authentication/controllers/login.controller.js' %}")
+script(type="text/javascript", src="{% static 'js/authentication/controllers/registration.controller.js' %}")
+
+script(type="text/javascript", src="{% static 'js/layout/layout.module.js' %}")
+script(type="text/javascript", src="{% static 'js/layout/controllers/navbar.controller.js' %}")
+
 
 | {% endcompress %}

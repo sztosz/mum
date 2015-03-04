@@ -1,12 +1,13 @@
 doctype html
-html(ng-app="mums_invoices")
+html(ng-app="mum")
   head
     title Mum's Invoices
     base(href="/")
-    | {% include 'stylesheets.html' %}
+    | {% include 'stylesheets.jade' %}
   body
-    | {% include 'navbar.html' %}
+    | {% include 'navbar.jade' %}
     .container-fluid
       .row
-        .col-xs-12.ng-view
-    | {% include 'javascript.html' %}
+        .col-xs-12
+          .ui-view
+    | {% include 'javascript.jade' %}
