@@ -1,0 +1,12 @@
+doctype html
+html(ng-app="mums_invoices")
+  head
+    title Mum's Invoices
+    base(href="/")
+    | {% include 'stylesheets.html' %}
+  body
+    | {% include 'navbar.html' %}
+    .container-fluid
+      .row
+        .col-xs-12.ng-view
+    | {% include 'javascript.html' %}
