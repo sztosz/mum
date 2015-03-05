@@ -6,7 +6,7 @@ from .serializers import ExaminationsListSerializer
 from .permissions import IsAuthor
 
 
-class ExaminationListsViewSet(viewsets.ModelViewSet):
+class ExaminationsListsViewSet(viewsets.ModelViewSet):
     queryset = ExaminationsList.objects.select_related('author').order_by('-created_at')
     serializer_class = ExaminationsListSerializer
 

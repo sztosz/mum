@@ -9,7 +9,7 @@ from examinations import views as exam_views
 
 router = routers.SimpleRouter()
 router.register(r'accounts', auth_views.UserViewSet)
-router.register(r'examination-lists', exam_views.ExaminationListsViewSet)
+router.register(r'examination-lists', exam_views.ExaminationsListsViewSet)
 
 
 urlpatterns = patterns(
