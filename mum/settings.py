@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'compressor',
     'mum',
     'authentication',
+    'examinations',
 
 )
 

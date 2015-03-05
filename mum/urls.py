@@ -5,9 +5,11 @@ from rest_framework_nested import routers
 
 from mum.views import IndexView
 from authentication import views as auth_views
+from examinations import views as exam_views
 
 router = routers.SimpleRouter()
 router.register(r'accounts', auth_views.UserViewSet)
+router.register(r'examination-lists', exam_views.ExaminationListsViewSet)
 
 
 urlpatterns = patterns(
