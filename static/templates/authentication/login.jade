@@ -3,16 +3,19 @@
     h1 Zaloguj się
 
     .well
-      form(role='form' ng-submit='vm.login()')
-        .alert.alert-danger(ng-show='error' ng-bind='error')
+      form.form-horizontal(role='form' ng-submit='vm.login()')
+        .alert.alert-danger(ng-show='vm.errorMessage' ng-bind='vm.errorMessage')
 
         .form-group
-          label(for='login__email')
-          input.form-control(type='text', id='login__email', ng-model='vm.email', placeholder='np. janek@poczta.pl')
+          label.col-md-4.control-label(for='login__username') Nazwa użytkownika
+          .col-md-8
+            input.form-control(type='text', id='login__username', ng-model='vm.username', placeholder='np. janek')
 
         .form-group
-          label(for='login__password')
-          input.form-control(type='password', id='login__password', ng-model='vm.password', placeholder='np. skomplikowanehasło')
+          label.col-md-4.control-label(for='login__password') Hasło
+          .col-md-8
+            input.form-control(type='password', id='login__password', ng-model='vm.password', placeholder='np. skomplikowanehasło' data-ripple-color="#F0F0F0")
 
         .form-group
-          button.btn.btn-primary(type='submit') Wyślij
+          //.col-md-offset-4.col-md-8
+          button.btn.btn-primary.pull-right(type='submit') Wyślij

@@ -5,7 +5,8 @@
     .module('mum', [
       'mum.config',
       'mum.router',
-      'mum.authentication'
+      'mum.authentication',
+      'mum.layout'
     ]
   );
 

@@ -22,26 +22,51 @@
     return Authentication;
 
     function register(email, password, username) {
+      console.log('register')
       return $http.post('/api/v1/accounts/', {
         username: username,
         password: password,
         email: email
-      })
+      }).then(registrationSuccessFn, registrationFailureFn);
+
+      function registrationSuccessFn() {
+        Authentication.login(username, password)
+        console.log('register.success')
+      }
+
+      function registrationFailureFn(data) {
+        return data.data.message;
+      }
     }
 
-    function login(email, password) {
-      return $http.post('/api/v1/login/', {
-        email: email,
+    function login(username, password) {
+      console.log('login')
+      return $http.post('/api/v1/auth/login/', {
+        username: username,
         password: password
-      })
+      }).then(loginSuccessFn, loginFailureFn);
+
+      function loginSuccessFn(data) {
+        console.log('login.success')
+        Authentication.setAuthenticatedAccount(data.data);
+        window.location = '/'
+      }
+
+      function loginFailureFn(data) {
+        return data.data.message;
+      }
     }
 
     function logout() {
-      return $http.post('/api/v1/login/', {}).then(redirect, redirect);
+      return $http.post('/api/v1/auth/logout/', {}).then(logoutSuccessFN, logoutFailureFN);
 
-      function redirect(){
-        unauthenticate();
+      function logoutSuccessFN(){
+        Authentication.unauthenticate();
         window.location = '/'
+      }
+
+      function logoutFailureFN() {
+        Authentication.unauthenticate();
       }
     }
 

@@ -16,6 +16,8 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^api/v1/', include(router.urls)),
+    url(r'^api/v1/auth/login/$', auth_views.LoginView.as_view(), name='login'),
+    url(r'^api/v1/auth/logout/$', auth_views.LogoutView.as_view(), name='logout'),
 
     url('^.*$', IndexView.as_view(), name='Index'),
 

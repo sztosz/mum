@@ -11,6 +11,7 @@
     var vm = this;
 
     vm.login = login;
+    //vm.errorMessage = null;
 
     activate();
 
@@ -21,7 +22,13 @@
     }
 
     function login() {
-      Authentication.login(vm.email, vm.password);
+      vm.errorMessage = null;
+      Authentication.login(vm.username, vm.password).then(setErrorMessageOnFailure);
+
+      function setErrorMessageOnFailure(respone) {
+        console.log(respone);
+        vm.errorMessage = respone
+      }
     }
   }
 

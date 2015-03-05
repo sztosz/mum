@@ -11,6 +11,7 @@
     var vm = this;
 
     vm.register = register;
+    vm.errorMessage = null;
 
     activate();
 
@@ -21,7 +22,13 @@
     }
 
     function register() {
-      Authtentication.register(vm.email, vm.password, vm.username)
+      vm.errorMessage = null;
+      Authtentication.register(vm.email, vm.password, vm.username).then(setErrorMessageOnFailure)
+
+      function setErrorMessageOnFailure(respone) {
+        console.log(respone);
+        vm.errorMessage = respone
+      }
     }
   }
 })();
