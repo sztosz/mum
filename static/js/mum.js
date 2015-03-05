@@ -6,7 +6,8 @@
       'mum.config',
       'mum.router',
       'mum.authentication',
-      'mum.layout'
+      'mum.layout',
+      'mum.examinations-list'
     ]
   );
 
