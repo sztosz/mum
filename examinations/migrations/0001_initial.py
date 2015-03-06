@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ExaminationsList',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, verbose_name='ID', auto_created=True)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
                 ('month', models.CharField(max_length=2, choices=[('01', 'Styczeń'), ('02', 'Luty'), ('03', 'Marzec'), ('04', 'Kwiecień'), ('05', 'Maj'), ('06', 'Czerwiec'), ('07', 'Lipiec'), ('08', 'Sierpień'), ('09', 'Wrzesień'), ('10', 'Październik'), ('11', 'Listopad'), ('12', 'Grudzień')])),
                 ('year', models.IntegerField()),
                 ('rate', models.IntegerField()),
