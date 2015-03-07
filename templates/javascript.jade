@@ -7,13 +7,13 @@
 script(type="text/javascript", src="{% static 'bower_components/jquery/dist/jquery.js' %}")
 
 script(type="text/javascript", src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}")
-//script(type="text/javascript", src="{% static 'bower_components/arrive/src/arrive.js' %}")
-//script(type="text/javascript", src="{% static 'bower_components/bootstrap-material-design/dist/js/material.js' %}")
-//script(type="text/javascript", src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}")
+script(type="text/javascript", src="{% static 'bower_components/snackbar/dist/snackbar.min.js' %}")
+script(type="text/javascript", src="{% static 'bower_components/undesrscore/underscore-min.js' %}")
 
 script(type="text/javascript", src="{% static 'bower_components/angular/angular.js' %}")
 script(type="text/javascript", src="{% static 'bower_components/angular-ui-router/release/angular-ui-router.js' %}")
 script(type="text/javascript", src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}")
+script(type="text/javascript", src="{% static 'bower_components/ngDialoog/js/ngDialog.min.js' %}")
 
 script(type="text/javascript", src="{% static 'js/mum.js' %}")
 script(type="text/javascript", src="{% static 'js/mum.config.js' %}")
@@ -28,7 +28,11 @@ script(type="text/javascript", src="{% static 'js/layout/layout.module.js' %}")
 script(type="text/javascript", src="{% static 'js/layout/controllers/navbar.controller.js' %}")
 
 script(type="text/javascript", src="{% static 'js/examinations-list/examinations-list.module.js' %}")
-//script(type="text/javascript", src="{% static 'js/examinations-list/controllers/navbar.controller.js' %}")
+script(type="text/javascript", src="{% static 'js/examinations-list/services/examinations-list.service.js' %}")
+script(type="text/javascript", src="{% static 'js/examinations-list/controllers/examinations-list.controller.js' %}")
+
+script(type="text/javascript", src="{% static 'js/utils/utils.module.js' %}")
+script(type="text/javascript", src="{% static 'js/utils/services/snackbar.module.js' %}")
 
 
 | {% endcompress %}

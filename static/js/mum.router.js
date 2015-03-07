@@ -26,6 +26,12 @@
         controller: 'RegistrationController',
         controllerAs: 'vm'
       })
+      .state('examinations-lists', {
+        url: '/examinations-lists',
+        templateUrl: 'static/templates/authentication/examinations-lists.html',
+        controller: 'ExaminationsListsController',
+        controllerAs: 'vm'
+      })
   }
 
 })();
