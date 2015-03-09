@@ -40,14 +40,14 @@
     }
 
     function login(username, password) {
-      console.log('login')
+      console.log('login');
       return $http.post('/api/v1/auth/login/', {
         username: username,
         password: password
       }).then(loginSuccessFn, loginFailureFn);
 
       function loginSuccessFn(data) {
-        console.log('login.success')
+        console.log('login.success');
         Authentication.setAuthenticatedAccount(data.data);
         window.location = '/'
       }
@@ -58,14 +58,14 @@
     }
 
     function logout() {
-      return $http.post('/api/v1/auth/logout/', {}).then(logoutSuccessFN, logoutFailureFN);
+      return $http.post('/api/v1/auth/logout/', {}).then(logoutSuccessFN, logoutFailureFn);
 
       function logoutSuccessFN(){
         Authentication.unauthenticate();
         window.location = '/'
       }
 
-      function logoutFailureFN() {
+      function logoutFailureFn() {
         Authentication.unauthenticate();
       }
     }

@@ -7,8 +7,10 @@
       'mum.router',
       'mum.authentication',
       'mum.layout',
-      'mum.examinations-list',
-      'mum.utils'
+      'mum.examinations-lists',
+      'mum.utils',
+      'mum.profiles'
+
     ]
   );
 

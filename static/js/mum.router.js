@@ -28,8 +28,20 @@
       })
       .state('examinations-lists', {
         url: '/examinations-lists',
-        templateUrl: 'static/templates/authentication/examinations-lists.html',
+        templateUrl: 'static/templates/examinations-lists/examinations-lists.html',
         controller: 'ExaminationsListsController',
+        controllerAs: 'vm'
+      })
+      .state('profile', {
+        url: '/:username',
+        templateUrl: '/static/templates/profiles/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'vm'
+      })
+      .state('profile-settings', {
+        url: '/:username/settings',
+        templateUrl: '/static/templates/profiles/settings.html',
+        controller: 'ProfileSettingsController',
         controllerAs: 'vm'
       })
   }

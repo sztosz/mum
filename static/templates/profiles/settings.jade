@@ -1,0 +1,17 @@
+.col-md-4.col-md-offset-4
+  .well(ng-show='vm.profile')
+    .form-group
+      label(for='settings__email') Email
+      input.form-control(type='text' id='settings__email' ng-model='vm.profile.email' placeholder='email@doamain.com')
+    .form-group
+      label(for='settings__password') Hasło
+      input.form-control(type='password' id='settings__password' ng-model='vm.profile.password' placeholder='qwerty')
+    .form-group
+      label(for='settings__confirm-password') Potwierdź Hasło
+      input.form-control(type='password' id='settings__confirm-password' ng-model='vm.profile.confirm_password' placeholder='qwerty')
+    .form-group
+      label(for='settings__username') Nazwa użytkownika
+      input.form-control(type='text' id='settings__username' ng-model='vm.profile.username' placeholder='np. Janek')
+    .form-group
+      button.btn.btn-primary(type='Submit' ng-click='vm.update()') Wyślij
+      button.btn.btn-danger.pull-right(type='button' ng-click='vm.destroy()') Usuń konto

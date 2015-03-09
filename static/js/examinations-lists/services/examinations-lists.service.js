@@ -3,9 +3,9 @@
 
   angular
     .module('mum.examinations-lists.services')
-    .factory('ExaminationsLists')
+    .factory('ExaminationsLists');
 
-  ExaminationsLists.$inject = ['$http']
+  ExaminationsLists.$inject = ['$http'];
 
   function ExaminationsLists($http) {
     var ExaminationsLists = {

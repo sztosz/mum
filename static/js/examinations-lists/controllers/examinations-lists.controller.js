@@ -1,12 +1,13 @@
 (function () {
   "use strict";
+
   angular
     .module('mum.examinations-lists.controllers')
     .controller('ExaminationsListsController', ExaminationsListsController);
 
-  ExaminationsListsController.$inject = ['$location', '$routeParams', 'ExaminationsLists'];
+  ExaminationsListsController.$inject = ['$scope', '$location', 'ExaminationsLists'];
 
-  function ExaminationsListsController($location, $routeParams, ExaminationLists) {
+  function ExaminationsListsController($scope, $location, ExaminationLists) {
     var vm = this;
 
     vm.lists = [];
@@ -14,6 +15,7 @@
     activate();
 
     function activate() {
+      console.log('ELCont')
       ExaminationLists.get().then(listSuccessFn, listErrorFn);
 
       $scope.$on('examinationsList.created', function (event, list) {

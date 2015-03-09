@@ -2,7 +2,7 @@
   "use strict";
   angular
     .module('mum.examinations-lists.directives')
-    .directive('examinations-lists')
+    .directive('examinations-lists', examinationsLists);
 
   function examinationsLists() {
     var directive = {
