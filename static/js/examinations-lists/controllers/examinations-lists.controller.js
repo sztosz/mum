@@ -10,7 +10,7 @@
   function ExaminationsListsController($scope, $location, ExaminationLists) {
     var vm = this;
 
-    vm.lists = ['1', '2'];
+    vm.lists = [];
 
     activate();
 
@@ -26,12 +26,14 @@
       console.log('ELCont');
       ExaminationLists.get().then(listSuccessFn, listErrorFn);
 
+
       $scope.$on('examinationsList.created', function (event, list) {
         vm.lists.unshift(list)
       });
 
       function listSuccessFn(data) {
         vm.lists = data.data;
+        console.log(vm.lists)
       }
 
       function listErrorFn(data) {

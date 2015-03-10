@@ -1,6 +1,6 @@
 .row.ng-cloak
-  .col-xs-12(ng-repeat='element in vm.lists') {{ element }}
+  .col-xs-12(ng-repeat='element in vm.lists')
+    examinations-list(element='element')
 
   div(ng-hide='vm.lists')
-    .col-xs-12 Nie ma żadnych list
-
+    .col-xs-12 Nie ma żadnych list...
