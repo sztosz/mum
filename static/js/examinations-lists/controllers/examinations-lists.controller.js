@@ -10,12 +10,20 @@
   function ExaminationsListsController($scope, $location, ExaminationLists) {
     var vm = this;
 
-    vm.lists = [];
+    vm.lists = ['1', '2'];
 
     activate();
 
     function activate() {
-      console.log('ELCont')
+      //console.log('ELDirCont');
+      //$scope.$watchCollection(function () {
+      //  return $scope.lists }, render);
+      //
+      //function render(current, original) {
+      //  vm.lists = current;
+      //}
+
+      console.log('ELCont');
       ExaminationLists.get().then(listSuccessFn, listErrorFn);
 
       $scope.$on('examinationsList.created', function (event, list) {

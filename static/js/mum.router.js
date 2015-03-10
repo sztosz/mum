@@ -13,32 +13,27 @@
       .state('/', {
         url: '/',
         templateUrl: 'static/templates/home.html'
-      })
-      .state('login', {
+      }).state('login', {
         url: '/login',
         templateUrl: 'static/templates/authentication/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
-      })
-      .state('registration', {
+      }).state('registration', {
         url: '/registration',
         templateUrl: 'static/templates/authentication/registration.html',
         controller: 'RegistrationController',
         controllerAs: 'vm'
-      })
-      .state('examinations-lists', {
+      }).state('examinations-lists', {
         url: '/examinations-lists',
         templateUrl: 'static/templates/examinations-lists/examinations-lists.html',
         controller: 'ExaminationsListsController',
         controllerAs: 'vm'
-      })
-      .state('profile', {
+      }).state('profile', {
         url: '/:username',
         templateUrl: '/static/templates/profiles/profile.html',
         controller: 'ProfileController',
         controllerAs: 'vm'
-      })
-      .state('profile-settings', {
+      }).state('profile-settings', {
         url: '/:username/settings',
         templateUrl: '/static/templates/profiles/settings.html',
         controller: 'ProfileSettingsController',

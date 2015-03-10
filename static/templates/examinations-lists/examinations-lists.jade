@@ -1,3 +1,6 @@
 .row.ng-cloak
-  div(ng-repeat='element in vm.lists')
-    .col-xs-12 {{ element }}
+  .col-xs-12(ng-repeat='element in vm.lists') {{ element }}
+
+  div(ng-hide='vm.lists')
+    .col-xs-12 Nie ma żadnych list
+
