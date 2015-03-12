@@ -5,12 +5,13 @@
     .module('mum.examinations-lists.controllers')
     .controller('NewExaminationsListController', NewExaminationsListController);
 
-  NewExaminationsListController.$inject = ['$rootScope', '$scope', 'Authentication', 'Snackbar', 'ExaminationsLists'];
+  NewExaminationsListController.$inject = ['$rootScope', '$scope', 'Authentication', 'Snackbar', 'ExaminationsLists', 'ExaminationsListsOptionValues'];
 
-  function NewExaminationsListController($rootScope, $scope, Authentication, Snackbar, ExaminationsLists) {
+  function NewExaminationsListController($rootScope, $scope, Authentication, Snackbar, ExaminationsLists, ExaminationsListsOptionValues) {
     var vm = this;
 
     vm.submit = submit;
+    vm.monthNames = ExaminationsListsOptionValues.monthNames();
 
     function submit() {
       console.log('submit clicked');

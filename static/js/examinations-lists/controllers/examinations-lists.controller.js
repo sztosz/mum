@@ -32,6 +32,7 @@
 
       function listSuccessFn(data) {
         vm.lists = data.data;
+        console.log(vm.lists);
       }
 
       function listErrorFn(data) {
