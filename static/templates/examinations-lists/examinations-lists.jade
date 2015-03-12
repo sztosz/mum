@@ -1,6 +1,18 @@
 .row.ng-cloak
-  .col-xs-12(ng-repeat='element in vm.lists')
-    examinations-list(element='element')
+  .col-xs-12
+    .col-xs-6
+      .btn-group.btn-group-justified
+        a.btn.btn-primary Miesiąc
+        a.btn.btn-primary Rok
+        a.btn.btn-primary Stawka
+        a.btn.btn-primary Suma
+    .col-xs-1
+      a.btn.btn-primary.btn-block(href='javascript:void(0)'
+                                  ng-dialog='/static/templates/examinations-lists/new-examination-list.html'
+                                  ng-dialog-controller='NewExaminationsListController as vm') Dodaj
+    div(ng-repeat='element in vm.lists')
+      examinations-list(element='element')
+
 
   div(ng-hide='vm.lists')
-    .col-xs-12 Nie ma żadnych list...
+    .col-xs-6 Nie ma żadnych list...

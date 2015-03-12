@@ -1,8 +1,8 @@
-.row
-  .col-xs-12
-    .well
-      p {{ element.month }}
-      p {{ element.year }}
-      p {{ element.rate }}
-      p {{ element.sum }}
-
+.col-xs-6
+  .btn-group.btn-group-justified
+    a.btn.btn-default.disabled {{ element.month }}
+    a.btn.btn-default.disabled {{ element.year }}
+    a.btn.btn-default.disabled {{ element.rate }}
+    a.btn.btn-default.disabled {{ element.sum }}
+.col-xs-1
+  a.btn.btn-warning.btn-block(href='#') Edytuj

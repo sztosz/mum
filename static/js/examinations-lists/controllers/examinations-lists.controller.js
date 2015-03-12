@@ -23,7 +23,6 @@
       //  vm.lists = current;
       //}
 
-      console.log('ELCont');
       ExaminationLists.get().then(listSuccessFn, listErrorFn);
 
 
@@ -33,7 +32,6 @@
 
       function listSuccessFn(data) {
         vm.lists = data.data;
-        console.log(vm.lists)
       }
 
       function listErrorFn(data) {

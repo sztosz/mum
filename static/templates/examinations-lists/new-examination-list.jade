@@ -1,0 +1,24 @@
+form.form-horizontal(role='form', ng-submit='vm.submit()')
+  .form-group
+    label.col-sm-2.control-label(for='list__month') Miesiac:
+    .col-sm-10
+      input.form-control#list__month(type='text', placeholder='01', ng-model='vm.month')
+
+  .form-group
+    label.col-sm-2.control-label(for='list__year') Rok:
+    .col-sm-10
+      input.form-control#list__year(type='text', placeholder='2015', ng-model='vm.year')
+
+  .form-group
+    label.col-sm-2.control-label(for='list__rate') Stawka:
+    .col-sm-10
+      input.form-control#list__rate(type='text', placeholder='40', ng-model='vm.rate')
+
+  .form-group
+    label.col-sm-2.control-label(for='list__sum') Suma:
+    .col-sm-10
+      input.form-control#list__sum(type='text', placeholder='01', ng-model='vm.sum')
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button.btn.btn-primary(type='submit') Dodaj

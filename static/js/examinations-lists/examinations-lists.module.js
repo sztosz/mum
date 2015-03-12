@@ -15,7 +15,7 @@
     .module('mum.examinations-lists.services', []);
 
   angular
-    .module('mum.examinations-lists.directives', [])
+    .module('mum.examinations-lists.directives', ['ngDialog'])
 
 
 })();
