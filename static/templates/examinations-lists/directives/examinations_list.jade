@@ -1,6 +1,6 @@
 .col-xs-6
   .btn-group.btn-group-justified
-    a.btn.btn-default.disabled {{ element.month }}
+    a.btn.btn-default.disabled {{ vm.getMonthName(element.month) }}
     a.btn.btn-default.disabled {{ element.year }}
     a.btn.btn-default.disabled {{ element.rate }}
     a.btn.btn-default.disabled {{ element.sum }}

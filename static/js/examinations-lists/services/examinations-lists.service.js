@@ -9,15 +9,19 @@
 
   function ExaminationsLists($http) {
     var ExaminationsLists = {
-      get: get,
+      getAll: getAll,
       create: create
     };
 
     return ExaminationsLists;
 
 
-    function get() {
+    function getAll() {
       return $http.get('/api/v1/examination-lists/')
+    }
+
+    function get(examinationlist) {
+      return $http.get('/api/v1/examination-lists/' + examinationlist + '/');
     }
 
     function create(month, year, rate, sum) {

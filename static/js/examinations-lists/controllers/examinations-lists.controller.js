@@ -23,7 +23,7 @@
       //  vm.lists = current;
       //}
 
-      ExaminationLists.get().then(listSuccessFn, listErrorFn);
+      ExaminationLists.getAll().then(listSuccessFn, listErrorFn);
 
 
       $scope.$on('examinationsList.created', function (event, list) {

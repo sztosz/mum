@@ -7,8 +7,8 @@
 
   function examinationList() {
     var directive = {
-      //controller: 'PostsController',
-      //controllerAs: 'vm',
+      controller: 'ExaminationsListDirectiveController',
+      controllerAs: 'vm',
       restrict: 'E',
       scope: {
         element: '='
